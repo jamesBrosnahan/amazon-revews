@@ -1,5 +1,32 @@
+@extends('index')
 
-<table border="1">
+@section('content')
+<style>
+table {
+    border-collapse:separate;
+    border:solid black 1px;
+    border-radius:6px;
+    -moz-border-radius:6px;
+    width: 90%;
+    text-align:center;
+    align:center;
+}
+
+td, th {
+    border-left:solid black 1px;
+    border-top:solid black 1px;
+}
+
+th {
+    background-color: blue;
+    border-top: none;
+}
+
+td:first-child, th:first-child {
+     border-left: none;
+}
+</style>
+<table style="border: black 1px; background-image: url('images/Grunge_Texture.jpg');background-width: 100%;">
     <thead>
         <td>ID</td>
         <td>ProductID</td>
@@ -27,3 +54,4 @@
 @endforeach
 </tbody>
 </table>
+@endsection
